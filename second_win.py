@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QWidget, Qlabel, QVBoxtayout, QPushButton
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QPushButton
 
 class TestWin(QWidget):
     def __init__(self):
