@@ -71,21 +71,21 @@ class TestWin(QWidget):
 
     def timer_sits(self):
         global time 
-        time = Qtime(0, 0, 30)
+        time = QTime(0, 0, 30)
         self.timer = QTimer()
         self.timer.timeout.connect(self.timer2Event)
         self.time.start(1500)
 
     def timer_final(self):
         global time 
-        time = Qtime(0, 1, 0)
+        time = QTime(0, 1, 0)
         self.timer = QTimer()
         self.timer.timeout.connect(self.timer3Event)
         self.time.start(1000)  
 
     def timer1Event(self):
         global time 
-        time = timeaddSecs(-1)
+        time = time.addSecs(-1)
         self.text_timer.setText(time.toString("hh:mm:ss"))
         self.text_timer.setStyleSheet("color: rgb(0,0,0")
         self.text_timer.setFont(QFont("Times", 36, QFont.Bold))
@@ -94,7 +94,7 @@ class TestWin(QWidget):
 
     def timer2Event(self):
         global time 
-        time = timeaddSecs(-1)
+        time = time.addSecs(-1)
         self.text_timer.setText(time.toString("hh:mm:ss"))
         self.text_timer.setStyleSheet("color: rgb(0,0,0")
         self.text_timer.setFont(QFont("Times", 36, QFont.Bold))
@@ -103,7 +103,7 @@ class TestWin(QWidget):
 
     def timer3Event(self):
         global time 
-        time = timeaddSecs(-1)
+        time = time.addSecs(-1)
         self.text_timer.setText(time.toString("hh:mm:ss"))
         if int(time.toString("hh:mm:ss")[6:8]) >= 45:
             self.text_timer.setStyleSheet("color: rgb(0,255,0)")
