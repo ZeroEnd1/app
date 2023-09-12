@@ -74,14 +74,14 @@ class TestWin(QWidget):
         time = QTime(0, 0, 30)
         self.timer = QTimer()
         self.timer.timeout.connect(self.timer2Event)
-        self.time.start(1500)
+        self.timer.start(1500)
 
     def timer_final(self):
         global time 
         time = QTime(0, 1, 0)
         self.timer = QTimer()
         self.timer.timeout.connect(self.timer3Event)
-        self.time.start(1000)  
+        self.timer.start(1000)  
 
     def timer1Event(self):
         global time 
