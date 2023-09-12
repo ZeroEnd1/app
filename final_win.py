@@ -3,9 +3,9 @@ from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLay
 from instr import *
 
 class FinalWin(QWidget):
-    def __init__(self):
+    def __init__(self, exp):
         super().__init__()
-        self.exp = exp()
+        self.exp = exp
         self.initUI()
         self.set_appear()
         self.show()
